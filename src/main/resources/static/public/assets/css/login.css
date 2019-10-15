@@ -1,0 +1,58 @@
+.logo-div {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+.logo-name-register{
+    margin-right: 10px;
+    margin-bottom: 30px;
+    font-size: 80px !important;
+    font-weight: 600;
+    letter-spacing: -4px;
+    color: #e6e6e6;
+}
+
+.logo-name-register2{
+    margin-right: 10px;
+    margin-bottom: 30px;
+    font-size: 60px !important;
+    font-weight: 600;
+    letter-spacing: -4px;
+    color: #337ab7;
+}
+
+.logo-name-login{
+    margin-right: 10px;
+    margin-bottom: 30px;
+    font-size: 150px !important;
+    font-weight: 800;
+    letter-spacing: -10px;
+    color: #e6e6e6;
+
+}
+.radio-div{
+    display: inline-block;
+    margin: 0 10px 20px 10px;
+}
+
+.lang-btn-div button{
+    width: 90px;
+    margin: 2px 2px 2px 2px;
+}
+
+
+/* 에러 메세지 */
+.errorCheck {
+    color: red;
+    font-weight: bolder;
+}
+
+@media (min-width: 768px){
+    .errorCheck {
+        color: #f8ac59;
+        font-weight: bolder;
+    }
+}
+
+.padding-bottom-10{
+    padding-bottom: 10px;
+}

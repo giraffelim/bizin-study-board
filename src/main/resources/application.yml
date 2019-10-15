@@ -1,0 +1,73 @@
+# PROFILES
+spring:
+    profiles:
+        active: local
+---
+spring:
+    profiles: local
+    devtools:
+        livereload:
+            enabled: true
+
+    datasource:
+        driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+        url: jdbc:log4jdbc:postgresql:///postgres?currentSchema=study_test
+        username: postgres
+        password:
+        hikari:
+            maximumPoolSize: 5
+            idleTimeout: 300000
+
+
+mybatis:
+    config-location: classpath:config/mybatis-config.xml
+    mapper-locations:
+        - mapper/*.xml
+        - mapper/**/*.xml
+
+logging:
+    config: classpath:config/logback-spring.xml
+
+
+uploadPath : /Users/admin/upload
+
+study:
+  upload:
+    config:
+      fileroot: file:///Users/admin/upload/
+      prefix: /upload
+
+---
+spring:
+  profiles: server
+  devtools:
+    livereload:
+      enabled: true
+
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:postgresql:///postgres?currentSchema=study
+    username: postgres
+    password:
+    hikari:
+      maximumPoolSize: 5
+      idleTimeout: 300000
+
+
+mybatis:
+  config-location: classpath:config/mybatis-config.xml
+  mapper-locations:
+    - mapper/*.xml
+    - mapper/**/*.xml
+
+logging:
+  config: classpath:config/logback-spring.xml
+
+
+uploadPath : /home/boneis/project/upload
+
+study:
+  upload:
+    config:
+      fileroot: file:///home/boneis/project/upload/
+      prefix: /upload

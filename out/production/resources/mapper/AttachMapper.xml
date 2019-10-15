@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boneis.board.mapper.AttachMapper">
+
+  <select id="getOldFiles" resultType="AttachBoard">
+    select * from study_board_attach where attach_path = #{attachPath};
+  </select>
+
+  <delete id="deleteAttach">
+    delete from study_board_attach where board_no = #{boardNo}
+  </delete>
+
+  <insert id="insertAttach">
+    <selectKey keyProperty="attachNo" order="BEFORE" resultType="int">
+      select nextval('attach_seq');
+    </selectKey>
+    insert into study_board_attach (attach_no, board_no, attach_path, file_name, create_dt, url_path)
+    values (#{attachNo}, #{boardNo}, #{attachPath}, #{fileName}, now(), #{urlPath})
+  </insert>
+
+  <select id="findAttachNo" resultType="String">
+      select attach_no from study_board_attach where board_no = #{boardNo};
+  </select>
+
+  <update id="modifyAttach">
+      update study_board_attach set attach_path = #{attachPath}, file_name = #{fileName}, url_path = #{urlPath} where attach_no = #{attachNo};
+  </update>
+
+</mapper>

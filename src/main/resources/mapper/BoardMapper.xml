@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boneis.board.mapper.BoardMapper">
+
+    <select id="getAllList" resultType="Board">
+        select * from study_board order by re_group desc, re_sorts asc;
+    </select>
+
+    <insert id="insertBoard">
+      <selectKey keyProperty="boardNo" order="BEFORE" resultType="int">
+        select nextval('board_seq');
+      </selectKey>
+      insert into study_board(board_no, writer, title, password, content, re_group, re_sorts, re_depth, create_dt)
+      values (#{boardNo}, #{writer}, #{title}, #{password}, #{content}, #{reGroup}, #{reSorts}, #{reDepth}, now());
+    </insert>
+
+    <select id="getBoard" resultType="DetailBoard">
+      select sb.board_no, sb.writer, sb.title, sb.content, sb.create_dt, sb.update_dt, sa.url_path, sb.re_group, sb.re_sorts, sb.re_depth
+      from study_board sb left outer join study_board_attach sa
+      on sa.board_no = sb.board_no
+      where sb.board_no = #{boardNo};
+    </select>
+
+    <update id="updateReGroup">
+      update study_board set re_group = #{boardNo} where board_no = #{boardNo};
+    </update>
+
+    <select id="replyFindSorts" resultType="int">
+      <![CDATA[
+      select COALESCE(min(re_sorts),0) from study_board
+      where re_group = #{reGroup}
+      and re_sorts > #{reSorts}
+      and re_depth <= #{reDepth};
+      ]]>
+    </select>
+
+    <select id="findSorts" resultType="int">
+      select COALESCE(MAX(re_sorts),0) +1 from study_board where re_group = #{reGroup};
+    </select>
+
+    <update id="updateSorts">
+      <![CDATA[
+      update study_board set re_sorts = re_sorts + 1
+      where re_group = #{reGroup} and re_sorts >= #{reSorts}
+      ]]>
+    </update>
+
+    <select id="getSearchList" resultType="Board">
+      select * from study_board
+      <if test='"제목".equals(type)'>
+        where title like '%'||#{value}||'%'
+      </if>
+      <if test='"작성자".equals(type)'>
+        where writer like '%'||#{value}||'%'
+      </if>
+      order by re_group desc, re_sorts asc;
+    </select>
+
+    <update id="modifyBoard">
+      update study_board set writer = #{writer}, title = #{title}, content = #{content}, password = #{password}, update_dt = now() where board_no = #{boardNo};
+    </update>
+
+    <select id="findPassByBoardNo" resultType="String">
+      select password from study_board where board_no = #{boardNo}
+    </select>
+
+    <delete id="removeBoard">
+      delete from study_board
+      where
+      <if test="flag == 1">
+        board_no = #{boardNo}
+      </if>
+      <if test="flag == 2">
+        re_group = #{boardNo}
+      </if>
+    </delete>
+
+    <update id="removeUpdateBoard">
+      update study_board set title = '삭제 된 글입니다.', content = '', writer = '' where board_no = #{boardNo}
+    </update>
+
+    <select id = "getReGroupCount" resultType="int">
+      select count(*) from study_board where re_group = #{boardNo};
+    </select>
+
+    <select id="getReGroupByBoardNo" resultType="int">
+      select re_group from study_board where board_no = #{boardNo};
+    </select>
+
+    <select id="deleteList" resultType="Board">
+      select * from study_board where re_group = #{boardNo};
+    </select>
+
+</mapper>

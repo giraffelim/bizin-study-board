@@ -1,0 +1,498 @@
+/* 모달 크기 */
+.modal-dialog.modal-800 {
+    width: 800px;
+    margin: 30px auto;
+}
+.customRaius {
+    border-radius: 0px 3px 3px 0px !important;
+}
+.customRaius1 {
+    border-radius: 3px !important;
+    margin-left: 10px !important;
+}
+.customRaius3 {
+    border-radius: 3px 0px 0px 3px !important;
+}
+
+.modal-xlg {
+
+}
+/* 언어설정 페이지 */
+.message-list {
+    table-layout: fixed;
+}
+.message-list .line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.errorCheck {
+    color: red;
+    font-weight: bolder;
+}
+
+.padding-top-5 {
+    padding-top: 5px;
+}
+.padding-right-10 {
+    padding-right: 10px;
+}
+.wizardCustomButton {
+    background-color: rgb(26, 179, 148) !important;
+    border-color: rgb(26, 179, 148) !important;
+    color: white !important;
+}
+
+/* layerpopup */
+.layer_popup{z-index: 9000;  position: fixed;  top: 0;  left: 0;  width: 100%;  max-width:100%;  height: 100%;  text-align: center;  background: rgba(0,0,0,.8);  }
+.layer_popup .pop_cont_wrap {  z-index: 303;  overflow: hidden;  position: fixed;  top: 50%;  left: 50%;  width: 28rem;  background: #fff;  border-radius: .15rem;  transform: translate(-50%, -50%);  -webkit-transform: translate(-50%, -50%);  }
+.layer_popup .pop_cont_wrap .pop_cont{padding:30px 20px 25px 20px;box-sizing: border-box;}
+.layer_popup .pop_cont_wrap .pop_cont .sub_title{font-size:15px;color:#151515;font-weight:bold;line-height: 21px; text-align: center;}
+.layer_popup .pop_cont_wrap .pop_footer{}
+.layer_popup .pop_cont_wrap .pop_footer .btn_wrap{display:flex;}
+.layer_popup .pop_cont_wrap .pop_footer .btn_wrap .btn{color:#888;border-radius:0;border:1px hidden; border-top:1px solid #cecece;font-size:1.6rem;font-weight:bold;}
+.layer_popup .pop_cont_wrap .pop_footer .btn_wrap .btn:active{background: rgba(51, 51, 51, 0.1);}
+.layer_popup .pop_cont_wrap .pop_footer .btn_wrap .btn_ok{color:#f99d1a;}
+.layer_popup .pop_cont_wrap .pop_footer .btn_wrap .btn+.btn{border-left:1px solid #cecece;;}
+.layer_popup .pop_cont_wrap .pop_footer .btn_wrap .btn {width:100%;}
+
+
+/* loding */
+.mw_layer{display:none;position:fixed;position:absolute;top:0;left:0;z-index:10000;width:100%;height:100%}
+.mw_layer.open{display:block}
+.mw_layer .bg{position:absolute;top:0;left:0;width:100%;height:100%;background:#151515;opacity:.5;filter:alpha(opacity=30)}
+
+#loading{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);width:12%;}
+#loading img {-webkit-animation: spin .6s infinite linear;animation: spin .6s infinite linear;max-width:100%;}
+
+@-webkit-keyframes spin {
+    from   {  -webkit-transform: rotate(0deg); }
+    to   {  -webkit-transform: rotate(360deg); }
+}
+.alignright {
+    text-align: right !important;
+}
+.wizard-header {
+    display: none !important;
+}
+@media (min-width: 792px) {
+    .modal-custom {
+        width: 700px;
+    }
+}
+.custom-wizardTap {
+    padding-top: 30px !important;
+}
+.customLabel {
+    display: initial;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.dateInputClass {
+    border: none;
+    min-width: 0px !important;
+}
+.custom-td {
+    vertical-align: middle !important;
+    text-align: center;
+}
+.customTable > thead > tr > th{
+    vertical-align: middle;
+    text-align: center;
+}
+.customTable > tbody > tr > td{
+    text-align: center;
+}
+.customTable > tfoot > tr > th {
+    text-align: center;
+}
+.customTable .pretty {
+    margin-right: 0em;
+}
+.customInput {
+    line-height: 1.5;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: 1px solid rgb(169, 169, 169);
+}
+.customInputMini{
+    width: 70px;
+    line-height: 1.5;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: 1px solid rgb(169, 169, 169);
+}
+.inputTr {
+    background: #f2fbff;
+}
+.ibox-title .customH5 {
+    margin: 0px !important;
+}
+/* 사원등록 페이지 */
+.info-center{
+    text-align: center;
+}
+.radio-div{
+    display: inline-block;
+    margin: 0 17px 0 17px;
+}
+
+.emp-table th{
+    min-width: 100px;
+    max-width: 120px;
+    text-align: center;
+}
+.emp-table .mini-th {
+    min-width: 70px;
+}
+/*.corpor-table input{*/
+/*max-width: 80px;*/
+/*}*/
+.emp-table td{
+    text-align: center;
+    vertical-align: middle;
+}
+.emp-table .pretty {
+    margin-right: 0em;
+}
+.emp-custom-border{
+    border-right-width: 3px !important;
+}
+.emp-table > thead > tr > th{
+    vertical-align: middle;
+    text-align: center;
+}
+.emp-table > tbody > tr > td{
+    text-align: center;
+}
+.emp-table > tfoot > tr > th {
+    text-align: center;
+}
+.emp-table .pretty {
+    margin-right: 0em;
+}
+.emp-user-image {
+    width: 35px;
+    height: 35px;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive > .emp-table > tbody > tr > th,
+    .table-responsive > .emp-table > thead > tr > th {
+        white-space: normal;
+    }
+}
+
+
+
+/* 급여관리 페이지 */
+.salary-table th{
+    max-width: 120px;
+    text-align: center;
+}
+.salary-table input{
+    max-width: 100px;
+}
+.salary-table td{
+    text-align: right;
+    vertical-align: middle;
+}
+.salary-table .input-td{
+    text-align: center;
+}
+.salary-table .width-s{
+    min-width: 30px !important;
+    width: 30px !important;
+    max-width: 30px !important;
+}
+.salary-table .width-sm{
+    min-width: 70px !important;
+    width: 70px !important;
+    max-width: 70px !important;
+}
+.salary-table .width-m{
+    min-width: 100px !important;
+    width: 100px !important
+}
+.salary-table .width-ml{
+    min-width: 120px !important;
+}
+.salary-table .width-l{
+    min-width: 150px !important;
+}
+
+
+
+.salary-custom-border{
+    border-right-width: 3px !important;
+}
+.salary-custom-border-bottom{
+    border-bottom-width: 3px !important;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive > .salary-table > tbody > tr > th,
+    .table-responsive > .salary-table > thead > tr > th,
+    .table-responsive > .salary-table > tbody > tr > td  {
+        white-space: normal ;
+    }
+}
+.salary-custom-input {
+    line-height: 1.5;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: 1px solid rgb(169, 169, 169);
+    text-align: right;
+}
+
+
+/*급여 테이블 틀고정 관련*/
+@media screen and (min-width: 767px) {
+    .salary-scrolling-table td:first-child {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        outline: 0.5px solid #DDDDDD;
+
+    }
+
+    .salary-scrolling-table td:nth-child(2) {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 30.4px;
+        outline: 0.5px solid #DDDDDD;
+    }
+
+    .salary-scrolling-table td:nth-child(3) {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 100.4px;
+        outline: 0.5px solid #DDDDDD;
+    }
+
+    .salary-scrolling-table td:nth-child(4) {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 250.8px;
+        outline: 0.5px solid #DDDDDD;
+    }
+
+    .salary-scrolling-table td:nth-child(5) {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 371.2px;
+        outline: 0.5px solid #DDDDDD;
+    }
+
+    .salary-scrolling-table .line-one th:first-child {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        outline: 0.5px solid #DDDDDD;
+    }
+
+    .salary-scrolling-table .line-one th:nth-child(2) {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 100.4px;
+        outline: 0.5px solid #DDDDDD;
+    }
+
+    .salary-scrolling-table .line-two th:first-child {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        outline: 0.5px solid #DDDDDD;
+    }
+
+    .salary-scrolling-table .line-two th:nth-child(2) {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 30.4px;
+        outline: 0.5px solid #DDDDDD;
+    }
+
+    .salary-scrolling-table .line-two th:nth-child(3) {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 100.4px;
+        outline: 0.5px solid #DDDDDD;
+    }
+
+    .salary-scrolling-table .line-two th:nth-child(4) {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 250.8px;
+        outline: 0.5px solid #DDDDDD;
+    }
+
+    .salary-scrolling-table .line-two th:nth-child(5) {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 371.2px;
+        outline: 0.5px solid #DDDDDD;
+    }
+}
+
+
+
+
+/* 법인세 FORM1771-1 */
+.corpor-table th{
+    max-width: 120px;
+    text-align: center;
+}
+/*.corpor-table input{*/
+    /*max-width: 80px;*/
+/*}*/
+.corpor-table td{
+    text-align: center;
+    vertical-align: middle;
+}
+.corpor-table .pretty {
+    margin-right: 0em;
+}
+.corpor-custom-border{
+    border-right-width: 3px !important;
+}
+
+
+.corpor-table > thead > tr > th{
+    vertical-align: middle;
+    text-align: center;
+}
+.corpor-table > tbody > tr > td{
+    text-align: center;
+}
+.corpor-table > tfoot > tr > th {
+    text-align: center;
+}
+.corpor-table .pretty {
+    margin-right: 0em;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive > .corpor-table > tbody > tr > th,
+    .table-responsive > .corpor-table > thead > tr > th {
+        white-space: normal;
+    }
+}
+
+.corpor-form-td {
+    width: 100px; !important;
+}
+
+@media (min-width: 992px) {
+    .custom-modal-lg {
+        width: 1200px;
+    }
+    .custom-modal-mlg {
+        width: 1100px;
+    }
+}
+
+.customInput-disabled {
+    line-height: 1.5;
+    height: 30px;
+    font-size: 12px;;
+    border:none;
+    pointer-events:none;
+}
+
+/* 법인세 FORM1771-5 */
+
+.margin-0 {
+    margin: 0 0 0 0;
+}
+
+.modal-title-custom-margin {
+    margin: 20px 0 0 40px;
+}
+
+/* 지급공제 */
+
+.payment-table1 {
+     min-height: 322px;
+}
+.payment-table2 {
+    min-height: 131px;
+}
+
+
+
+/* 이력서 관리 */
+.resume-remove-btn {
+    position: relative;
+    border-top: 1px solid #f4f4f4;
+}
+.resume-remove-btn > .remove-btn {
+    z-index: 100;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.resume-add-btn {
+    padding: 0;
+}
+.resume-add-btn > button {
+    width: 100%;
+}
+
+.resume-view-label {
+    overflow-wrap: break-word;
+    height: auto;
+}
+
+/* 입사 컨펌 */
+
+.text-align-center {
+    text-align:center;
+}
+.inline-block {
+    display:inline-block;
+}
+.margin-right-5 {
+     margin-right:5px;
+ }
+.margin-left-5 {
+    margin-left:5px;
+}
+
+/* 필수 값 여부 표시 */
+.form-group .required:before {
+    color: red;
+    content: "*";
+    /*position: absolute;*/
+    /*margin-left: -15px;*/
+    padding-right: 15px;
+}
+
+.select-type {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 126px !important;
+    height: 30px;
+}
+.select-status {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    /*width: 169.9px !important;*/
+    height: 30px;
+}
+
+.clear-block-h-20{
+    clear:both;
+    height:20px;
+}
+
+.input-readonly{
+    pointer-events: none;
+    background-color: #fff; !important;
+    cursor: default;
+    border: none;
+}

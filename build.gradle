@@ -1,0 +1,44 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'com.boneis'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-web-services')
+    runtimeOnly('org.springframework.boot:spring-boot-devtools')
+    runtimeOnly('org.postgresql:postgresql')
+    annotationProcessor("org.projectlombok:lombok")
+    compileOnly('org.projectlombok:lombok')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0')
+    compile("org.postgresql:postgresql:9.2-1003-jdbc4")
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.2'
+    compile("com.fasterxml.jackson.core:jackson-annotations:2.9.0")
+    compile('org.apache.commons:commons-lang3:3.5')
+    compile('org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16')
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.3.0'
+    compile group: 'org.quartz-scheduler', name: 'quartz-jobs', version: '2.3.0'
+
+}
